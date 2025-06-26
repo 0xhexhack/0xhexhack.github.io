@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/favicon.png" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <title>HexHack</title>
+
+    <!-- SEO Metadata -->
+    <meta property="og:title" content="HexHack" />
+    <meta property="og:site_name" content="HexHack" />
+    <meta property="description" content="HexHack is an international cybersecurity conference organized by distinguished young security researchers." />
+    <meta property="og:description" content="HexHack is an international cybersecurity conference organized by distinguished young security researchers." />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#ca1928" />
+    <link rel="canonical" href="https://hexhack.org/" />
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+</head>
+<body><div class="load" id="load">
+    <pre class="term" id="term">hex@hack:~$ </pre>
+    <script src="/assets/splashscreen.js""></script>
+</div><nav class="open">
+    <div class="hex" role="img" aria-label="Navigation bar background graphic, styled like the address panel of a hex editor.">
+        <ol><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/></ol>
+    </div>
+    <ul>
+        <li id="splash-hack-zero-for-reference" aria-hidden="true">0</li><li >
+                <a href="/"
+                   title="Home"highlighted>Home</a>
+            </li><li style="z-index: 1;">
+                <a href="/blog"
+                   title="Blog">Blog</a>
+            </li><li >
+                <a href="/team"
+                   title="Team">Team</a>
+            </li></ul>
+
+</nav>
+
+<div class="nav-toggle hamburger-container">
+    <div class="hamburger-button"></div>
+</div>
+
+
+<script>
+    const responsiveNavThreshold = 500;
+    const navOpener = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+
+    const toggle = (cl, attr) => cl.contains(attr) ? cl.remove(attr) : cl.add(attr);
+
+    navOpener.addEventListener('click', () => {
+        toggle(nav.classList, 'open');
+    });
+
+    let enabled = false;
+
+    const setResponsive = () => {
+        if (window.innerWidth < responsiveNavThreshold) {
+            if (enabled) return;
+            enabled = true;
+            nav.classList.remove('open');
+            navOpener.classList.add('enabled');
+        }
+        else {
+            if (!enabled) return;
+            enabled = false;
+            nav.classList.add('open');
+            navOpener.classList.remove('enabled');
+        }
+    };
+    setResponsive();
+    window.addEventListener('resize', setResponsive);
+</script>
+<div class="content">
+            <main>
+                <h2 id="welcome-to-hexhack">Welcome to HexHack!</h2>
+
+<p>Welcome to the HexHack, a conferance that was organized by young security researchers around the world. Together with the researchers in our team, we explore and share our work in areas like web security, pwn, and reverse engineering—while having fun along the way! If you want to see who is on our team, check out our <a href="/team">team page</a>.</p>
+
+<h2 id="what-do-we-do">What do we do?</h2>
+
+<p>We regularly share insights from our security research and host meetups to connect with the community!</p>
+
+<h2 id="contact-us">Contact Us</h2>
+
+<p>To contact us, either email us at <a href="mailto:hexhack0x1@protonmail.com">hexhack0x1@protonmail.com</a>. Be sure to follow us on <a href="https://twitter.com/hex_hack">Twitter</a> ! If you would like to see what we are up to, be sure to check out our profile on <a href="https://github.com/0xhexhack/">GitHub</a>!</p>
+
+            </main><footer>
+    <div class="window-container">
+        <div class="window">
+            <div class="contacts">
+                <p><a href="mailto:hexhack0x1@protonmail.com">Email</a></p>
+                <p><a href="https://twitter.com/hexhack">Twitter</a></p>
+            </div>
+            <p>© 2025 HexHack, all rights reserved.</p>
+        </div>
+    </div>
+    <script src="/assets/footer-fix.js"></script>
+</footer>
+</div>
+    </body>
+</html>

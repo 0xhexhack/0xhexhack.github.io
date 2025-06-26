@@ -1,0 +1,1 @@
+make; rm -rf ../0xhexhack.github.io/*; cp -r _site/* ../0xhexhack.github.io/.; cd ../0xhexhack.github.io;
