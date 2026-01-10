@@ -39,7 +39,7 @@ function feedbacker(i) {
     if (i == 8) {
         textarea.innerHTML += "00000080  2a 2a 2a 2a 2a 2a 2a <span style='color:#ca1928'>48  65 78 48 61 63 6b</span> 2a 2a  |*****<span style='color:#ca1928'>HexHack</span>****|<br>";
     } else if (i == 9) {
-        textarea.innerHTML += "00000090  2a 2a 2a 2a 2a 2a 2a 2a  <span style='color:#ca1928'>54 61 6c 54 65 63 68</span> 2a  |*****<span style='color:#ca1928'>at TalTech</span>**|<br>";
+        textarea.innerHTML += "00000090  2a 2a 2a 2a 2a 2a 2a 2a  <span style='color:#ca1928'>54 61 6c 54 65 63 68</span> 2a  |****<span style='color:#ca1928'>at TalTech</span>**|<br>";
     } else {
         textarea.append(leftPad(Number(i).toString(16).toUpperCase(), 7, '0') + '0' + hexdump + "\n");
     }
